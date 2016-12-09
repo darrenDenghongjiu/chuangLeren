@@ -1,0 +1,260 @@
+<% if(_data){ %>
+<div class="container">
+  <div class="details table-responsive">
+
+    <div class="ordernumber">
+
+      <ul>
+        <li class="first">
+          采购单号： <span><%= _data.purchaseVO.purchaseNo %></span>
+        </li>
+        <li>
+          采购单状态：
+          <% if(_data.purchaseVO.status==0){ %>
+                <span>待审核</span>
+          <% } %>
+          <% if(_data.purchaseVO.status==1){ %>
+                <span>待发货</span>
+          <% } %>
+          <% if(_data.purchaseVO.status==2){ %>
+          <span>审核不通过</span>
+          <% } %>
+          <% if(_data.purchaseVO.status==5){ %>
+          <span>已发货</span>
+          <% } %>
+          <% if(_data.purchaseVO.status==6){ %>
+          <span>采购单完成</span>
+          <% } %>
+        </li>
+        <li>
+          订单号： <span><%= _data.purchaseVO.orderNo?_data.purchaseVO.orderNo:'无' %></span>
+        </li>
+      </ul>
+
+      <ul>
+        <li class="first">
+          基本信息： <span></span>
+        </li>
+      </ul>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>采购单号</th>
+          <th>供应商名称</th>
+          <th>门店</th>
+          <th>联系方式</th>
+          <th>采购员</th>
+          <th>采购时间</th>
+          <th>结算方式</th>
+          <th>采购单状态</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><%= _data.purchaseVO.purchaseNo %></td>
+          <td>别吃胖</td>
+          <td><%= _data.purchaseVO.shopName %></td>
+          <td><%= _data.purchaseVO.phone %></td>
+          <td><%= _data.purchaseVO.username %></td>
+          <td><%= _data.purchaseVO.createTime%></td>
+          <td>现金结算</td>
+          <td>
+            <% if(_data.purchaseVO.status==0){ %>
+            待审核
+            <% } %>
+            <% if(_data.purchaseVO.status==1){ %>
+            待发货
+            <% } %>
+            <% if(_data.purchaseVO.status==2){ %>
+            审核不通过
+            <% } %>
+            <% if(_data.purchaseVO.status==5){ %>
+           已发货
+            <% } %>
+            <% if(_data.purchaseVO.status==6){ %>
+            采购单完成
+            <% } %>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+    <div class="ordernumber">
+
+      <ul>
+        <li class="first">
+          商品信息：
+        </li>
+      </ul>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>商品类型</th>
+          <th>商品品牌</th>
+          <th>商品名称</th>
+          <th>商品规格</th>
+          <th>单价</th>
+          <th>采购数量</th>
+          <th>商品总额</th>
+          <th>采购单总额</th>
+          <th>采购折扣</th>
+          <th>采购单实付金额</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% for(var i=0,o;o=_data.shopPurchaseProducts[i];i++){ %>
+          <% if(i==0){ %>
+                  <tr>
+                    <td><%=o.typeName%></td>
+                    <td><%=o.brandName%></td>
+                    <td><%= o.productName %></td>
+                    <td><%= o.skuName %></td>
+                    <td><%= (o.price/100) %></td>
+                    <td><%= o.quantity %></td>
+                    <td><%= o.quantity*(o.price/100) %></td>
+                    <td rowspan="<%= _data.shopPurchaseProducts.length %>" ><%= (_data.purchaseVO.totalPrice/100) %></td>
+                    <td rowspan="<%= _data.shopPurchaseProducts.length %>" ><%=(_data.purchaseVO.discount+'%')%></td>
+                    <td rowspan="<%= _data.shopPurchaseProducts.length %>" ><%=(_data.purchaseVO.totalPrice/100*_data.purchaseVO.discount/100).toFixed(2)%></td>
+                  </tr>
+          <% }else{ %>
+              <tr>
+                <td><%=o.typeName%></td>
+                <td><%=o.brandName%></td>
+                <td><%= o.productName %></td>
+                <td><%= o.skuName %></td>
+                <td><%= (o.price/100) %></td>
+                <td><%= o.quantity %></td>
+                <td><%= (o.quantity*(o.price/100)).toFixed(2) %></td>
+              </tr>
+          <% } %>
+        <% } %>
+        </tbody>
+      </table>
+    </div>
+
+
+    <% if(_data.purchaseCheckLogVOs[0]){%>
+    <div class="ordernumber">
+      <ul>
+        <li class="first">
+          采购单跟踪：
+        </li>
+      </ul>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>处理时间</th>
+          <th>操作人</th>
+          <th>处理明细</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% if(_data.purchaseCheckLogVOs[0]){%>
+        <% for(var i=0,o;o=_data.purchaseCheckLogVOs[i];i++){ %>
+        <% if(o.operation==5){ %>
+          <tr>
+            <td><%=o.createTime%></td>
+            <td><%=o.userName%></td>
+            <td><%=(o.roleName?(o.roleName+'已发货'):'无')%></td>
+          </tr>
+        <%}else{%>
+            <tr>
+              <td><%=o.createTime%></td>
+              <td><%=o.userName%></td>
+              <%if(o.userName=='admin'){%>
+              <td><%=(o.userName+'，'+((o.operation==2)?('审核未通过，'+(o.remark?'备注：'+o.remark:'备注：无')):((o.operation==1)?('待发货，'+(o.remark?'备注：'+o.remark:'备注：无')):(o.operation==5)?'已发货，':(o.operation==6)?'采购单完成':(o.operation==0)?'待审核，':'')))%></td>
+              <%}else{%>
+              <td><%=(o.roleName+o.userName+'，'+((o.operation==2)?('审核未通过，'+(o.remark?'备注：'+o.remark:'备注：无')):((o.operation==1)?('待发货，'+(o.remark?'备注：'+o.remark:'备注：无')):(o.operation==5)?'已发货，':(o.operation==6)?'采购单完成':(o.operation==0)?'创建采购单':'')))%></td>
+              <%}%>
+            </tr>
+        <%}%>
+          <% } %>
+        <% } %>
+        </tbody>
+      </table>
+    </div>
+    <% } %>
+    <% if(_data.logistics.expressNo){%>
+    <div class="ordernumber">
+
+      <ul>
+        <li class="first">
+          发货单跟踪：
+        </li>
+      </ul>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>发货单号</th>
+          <th>快递公司</th>
+          <th>发货时间</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <% if(_data.logistics.expressNo){%>
+        <tr>
+          <td><%=_data.logistics.expressNo%></td>
+          <td><%=_data.logistics.expressName%></td>
+          <td><%=_data.logistics.deliveryTime%></td>
+        </tr>
+        <% } %>
+        </tbody>
+      </table>
+
+    </div>
+    <% } %>
+
+
+    <div class="ordernumber">
+      <% if(_data.logistics.expressMsg.expressMsg){%>
+      <span class="title">物流信息：</span>
+      <%}%>
+      <ul class="track-list">
+        <% if(_data.logistics.expressMsg.expressMsg){%>
+            <% for(var i=0,o;o=_data.logistics.expressMsg.expressMsg[i];i++){ %>
+        <% if(i==0){%>
+            <li class="curr">
+              <i class="node-icon"></i>
+              <span class="time"><%=o.time%></span>
+              <span class="txt"><%=o.context %> </span>
+             </li>
+        <% }else{ %>
+            <li>
+              <i class="node-icon"></i>
+              <span class="time"><%=o.time%></span>
+              <span class="txt"><%=o.context %> </span>
+            </li>
+        <% } %>
+            <% } %>
+        <% } %>
+      </ul>
+
+    </div>
+
+
+
+    <div class="ordernumber">
+      <!--
+     <ul>
+       <li class="first">
+         备注：
+       </li>
+     </ul>
+     <div class="txtarea">
+       <textarea>
+       </textarea>
+     </div>
+     -->
+      <div class="confirm">
+        <div>确定</div>
+      </div>
+    </div>
+  </div>
+</div>
+<% } %>

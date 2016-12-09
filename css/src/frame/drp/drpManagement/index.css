@@ -1,0 +1,39 @@
+.drpManagement .top { margin-top:30px;  font-size:14px; font-weight:bold; overflow:hidden;
+    border-bottom:1px solid #e4e4e4;  padding-bottom:20px; }
+.drpcontent { margin-top:30px; }
+th,td  { text-align: center; }
+.changePasswords{    position: fixed;  display:none;   left: 0;    top: 0;    background: rgba(0,0,0,0.5);    width: 100%;    height: 100%;    z-index: 999;}
+.changePasswords .box{display: table-cell; vertical-align: middle; text-align: center; }
+.changePasswords .box .popup_box{    width: 750px;    left: 0px;    right: 0px;    margin: auto; padding: 20px 0;   height: auto; background: #fff; border-radius: 10px;}
+.changePasswords  .l_h30{    line-height: 30px; }
+.changePasswords  .l_h30 .col-xs-12{ margin-top: 10px; }
+.changePasswords  .l_h30 .red{ color: red; height: 10px;    padding-left: 30px; line-height: 10px }
+.changePasswords .box .popup_box .pull-left{margin-right: 10px}
+.changePasswords .box .btn-group{    width:100%;   padding-top: 20px }
+.assistant .form-control{ width:200px; float:left; }
+.assistant .col-xs-2 { width:100px; padding:0; }
+.assistant { width:96%; margin:auto; margin-top:30px; font-weight:200; font-size:13px; }
+.assistant .top { font-size:16px; font-weight:bold; overflow:hidden; border-bottom:1px solid #e4e4e4; height:40px; }
+.assistant .top .must { color:red; line-height:34px; display:block; height:20px; float:left; margin-left:2px; }
+.assistant .top span { float:left; }
+.assistant .form-group { margin-top:20px;  overflow:hidden; }
+.assistant .col-xs-2 { line-height:30px; }
+.assistant .form-group .must { color:red; display:block; text-align:center;
+    width:10px; height:30px; line-height:36px; }
+.assistant .form-group span { float:left; }
+.assistant .btn-width-s { width:80px; height:22px;  color:#947B7B; border:1px solid #cccccc; border-radius:5px;
+    line-height:22px; text-align:center;  }
+.assistant .btn-width-left { margin-left:39px; }
+.assistant .btn-width-right { margin-left:19px; }
+.assistant .form-success { margin-top:30px; }
+.assistant .form-success .cancel{ background:#c9302c; border:1px solid #c9302c; }
+.assistant .btn-width { width:100px; height:40px; line-height:20px; }
+.assistant .btn-default:hover { background-color:#ffffff; }
+.assistant .btn-group { margin-left:15px; }
+.assistant .glyphicon { display:none; }
+.form-group-sm select.form-control { line-height: 20px; float:left; }
+.check-text { width:auto; margin-left:5px;  line-height:30px; color:red; float:left; }
+.col-xs-10 { overflow:hidden; }
+.edit {color:#5cb85c;}
+.addCode{ display:none; }
+.success-curr{ display: inline-block; }

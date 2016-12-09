@@ -1,0 +1,54 @@
+<% if(_data){ %>
+<table class="table table-bordered">
+<thead>
+<tr>
+    <th>订单编号</th>
+    <!-- <th>订单商品</th>-->
+    <th>成单店员</th>
+    <th>商品总额</th>
+    <th>订单总额</th>
+    <th>用户名</th>
+    <th>手机号</th>
+    <th>支付方式</th>
+    <th>订单状态</th>
+    <th>交易状态</th>
+    <th>收货方式</th>
+    <th>快递公司</th>
+    <th>快递单号</th>
+    <th>下单时间</th>
+    <th>付款时间</th>
+
+    <th>发货时间</th>
+    <th>备注</th>
+</tr>
+</thead>
+
+<tbody>
+    <% for(var i=0,o;o=_data[i];i++){ %>
+
+    <tr class="productName"  >
+        <td class="js_number" _value="<%=o.orderId %>" rowspan="2"><%=o.orderNo%></td>
+        <!--  <td>东方沐浴乳</td>-->
+        <td>小A</td>
+        <td><%=o.commodityPrice%></td>
+        <td><%=o.orderPrice%></td>
+        <td><%=o.userName%></td>
+        <td><%=o.telephone%></td>
+        <td><%=o.payTypeName %></td>
+        <td><%=o.statusName%></td>
+        <td><%=o.payStatusName%></td>
+        <td><%=o.shippingTypeName%></td>
+        <td><%=o.expressName%></td>
+        <td><%=o.expressNo%></td>
+        <td><%=o.createTime%></td>
+        <td><%=o.payTime%></td>
+        <td><%=o.deliveryTime%></td>
+        <td><%=o.remark%></td>
+    </tr>
+    <!--第-列-->
+    <tr class="js_hide" _value="<%=o.orderId %>" >
+        <td  colspan="17" ></td>
+    </tr>
+    <% } %>
+</tbody>
+<% } %>

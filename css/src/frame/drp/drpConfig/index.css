@@ -1,0 +1,33 @@
+.drpConfig .top { margin-top:30px;  font-size:14px; font-weight:bold; overflow:hidden;
+     padding-bottom:40px; }
+.drpConfig .search {  width:auto;  }
+.drpConfig .col-xs-3 .pull-left-width {  line-height: 34px;  float: left;  }
+.drpConfig .form-control-search {  width: 200px;  display: inherit; }
+.input-group { display:block; }
+.pull-left.l_h30{  line-height:34px;  }
+.condition { width:100%; margin-top:30px; position: relative; }
+select.city { float:left; }
+.form-control { width:auto; }
+.table-bordered  { text-align: center; }
+th,td  { text-align: center; }
+
+.drpConfig .btn-width {
+    width: 100px;
+    height: 40px;
+    line-height: 20px;
+}
+.drpConfig .form-success .cancel {
+    background: #c9302c;
+    border: 1px solid #c9302c;
+}
+.form-group2.form-group-sm{
+    float:left; margin-top:50px; overflow: hidden;
+}
+.btn-success.submit { margin-left:20px; }
+.col-xs-10{ margin-left:140px; width:auto; }
+.chec-text { padding-left:15px; width:auto; color:red; display: table; float:left; line-height: 34px;  }
+.name-text{ padding-left:10px; line-height: 30px; color: red; display: table;  }
+.edit{color:#5cb85c; }
+.addCode{ display:none; }
+.success-curr{ display:inline-block; }
+.input-group-btn { display: table; float:left; }

@@ -1,0 +1,54 @@
+ <div class="container">
+	<div class="store-stock table-responsive">
+	  <div class="top">
+			<div class="productname">
+				<div class="col-xs-3 search">
+					<div class="input-group">
+						 <div class="pull-left pull-left-width l_h30">输入商品名称：</div>
+						<input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+								  <span class="input-group-btn">
+									<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+								  </span>
+					</div>
+
+				</div>
+			</div>
+            <div class="col-xs-4 condition">
+                 <div class="pull-left l_h30">门店：</div>
+                 <div class="pull-left">
+                     <select name="type" class="form-control change store">
+
+                     </select>
+                 </div>
+            </div>
+			<div class="col-xs-4 condition brandType">
+                <div class="pull-left l_h30">选择商品类型：</div>
+                <div class="pull-left">
+                    <select name="type" class="form-control change type">
+
+                    </select>
+                </div>
+            </div>
+			<div class="col-xs-4 condition brand">
+                <div class="pull-left l_h30">选择商品品牌：</div>
+                <div class="pull-left">
+                    <select name="type" class="form-control change brand">
+
+                    </select>
+                </div>
+            </div>
+
+			
+	  </div>
+        <table class="table table-bordered " id="list" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+            <thead >
+            <th data-field="shopName" class="js_number">店铺</th>
+            <th data-field="typeName" class="js_number">商品类型</th>
+            <th data-field="brandName">商品品牌</th>
+            <th class="bandAndFormat" data-formatter="bandAndFormat" >商品名称及规格</th>
+            <th data-field="price">采购单价</th>
+            <th data-field="stock">店铺库存</th>
+            </thead>
+        </table>
+    </div>
+  </div>

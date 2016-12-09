@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="drpConfig table-responsive">
+        <div class="top">
+
+            <div class="col-xs-3 search">
+                <div class="input-group">
+                    <div class="pull-left pull-left-width l_h30">输入分销商名称：</div>
+                    <input maxlength="30" type="text" class="form-control form-control-search" id="keywords" placeholder="分销商名称" />
+                    <div class="name-text" id="name-text"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 condition">
+                <div class="pull-left l_h30">配置启始等级：</div>
+                <div class="pull-left">
+                    <select name="type" class="form-control change level">
+                        <option value="">请选择</option>
+                        <option value="1">一级</option>
+                        <option value="2">二级</option>
+                        <option value="3">三级</option>
+                        <option value="4">四级</option>
+                        <option value="5">五级</option>
+                        <option value="6">六级</option>
+                        <option value="7">七级</option>
+                    </select>
+                </div>
+                <div class="name-text" id="level-text"></div>
+            </div>
+            <div class="col-xs-4 condition">
+                <div class="pull-left l_h30">选择所属区域：</div>
+                <div class="pull-left">
+                <select name="type" class="form-control city province">
+                </select>
+                <select name="type" class="form-control city urban">
+                    <option value="">请选择城市</option>
+                </select>
+                <select name="type" class="form-control city area">
+                    <option value="">请选择地区</option>
+                </select>
+                </div>
+                <div class="name-text" id="city-text"></div>
+            </div>
+            <div class="form-group form-success form-group2 form-group-sm">
+                <div class="col-xs-10">
+                    <button type="button" class="btn btn-width cancel btn-width-right btn-success cancel">取消</button>
+                    <button type="button" class="btn btn-width btn-width-left btn-success submit" tid="">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

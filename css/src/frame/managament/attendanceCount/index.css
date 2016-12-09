@@ -1,0 +1,22 @@
+
+.clerkManager .edit { color:#5cb85c; }
+.clerkManager .table { text-align:center; margin-top:30px;  }
+.clerkManager .table th { text-align:center; }
+.clerkManager .top { margin-top:30px;  font-size:16px; font-weight:bold; overflow:hidden; 
+border-bottom:1px solid #e4e4e4; height:auto; padding-bottom:20px;  }
+.clerkManager .top span.cstore{ display:block; float:left; height:100%; line-height:34px; font-size:14px; }
+.clerkManager  .cstore-top {  overflow:hidden; }
+.clerkManager .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+.clerkManager .search { float:left; margin-left:15px; }
+.clerkManager .top .dropdown-toggle { background:#5cb85c; color:#ffffff; }
+.clerkManager .datetimepicker {   height:0px; display:none; background:-blue; margin-top:20px; }
+.clerkManager .datetimepicker input { width:180px; margin-top:2px; text-align:center; display:inline; }
+
+.record{position: fixed; width: 100%; height: 100%; z-index: 2; background: rgba(0,0,0,0.6);  top:0; left: 0; display: table;}
+.record .cont{ display: table-cell; margin: auto;vertical-align: middle;}
+.record .cont .box{width: 500px; height: 400px;  background: #fff; border-radius: 10px; margin: auto;position: relative}
+.record .cont .box .close{margin: 20px;position: absolute;right: 0}
+.record .cont .box .title{    text-align: center;    line-height: 60px;    font-size: 18px;    border-bottom: 1px solid #999;}
+.record .cont .box .btn{      margin:20px auto;    float: none!important;    display: inherit;}
+.record .cont .box .txt{      padding: 0;       height: 260px; margin: auto; text-align: center; overflow: hidden; overflow-y: auto;}
+.record .cont .box .txt li{      list-style: none; border-bottom: 1px solid #eee; padding: 10px 0}

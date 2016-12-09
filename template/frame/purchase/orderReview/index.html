@@ -1,0 +1,78 @@
+<div class="container">
+	<div class="orderReview table-responsive">
+	  <div class="top">
+			<div class="input-group">
+				<div class="pull-left-width">请先选择一个类别：</div>
+				<div class="category btn-group">
+					<div value="purchaseNo" class="btn choice btn-default" type="button">
+						  采购单号 <span class="glyphicon glyphicon-ok pull-right curr" style="margin-left:5px;"></span>
+					</div>
+				   <div value="productName" type="button" class="btn choice btn-default">
+					     产品名称<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+				   </div>
+				</div>
+				<div class="category-search">
+					<input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+					<span class="input-group-btn">
+						<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+					</span>
+				</div>
+
+				<div class="condition">
+					<div class="datetimepicker">
+						<span>采购日期：</span>
+						<input id="datetimepicker" class="form-control" placeholder="开始时间" type="text">
+						<input id="datetimepicker1" class="form-control" placeholder="结束时间" type="text">
+					</div>
+
+				</div>
+				<!--
+				<div class="condition">
+					<div class="col-xs-4 orderBox">
+						<div class="pull-left orderStatus l_h30">采购单状态：</div>
+						<div class="pull-left"> <select name="type" class="form-control">
+							<option value="">全部</option>
+							<option value="0">待审核</option>
+							<option value="2">审核不通过</option>
+							<option value="1">待发货</option>
+							<option value="5">别吃胖已发货</option>
+							<option value="9">采购单完成</option>
+						</select>
+						</div>
+					</div>
+				</div>
+				-->
+
+
+
+				<div class="review btn-group">
+					<span class="title">审核状态：</span>
+					<div class="btn choice btn-default" type="button">
+						  全部 <span _value="" class="glyphicon glyphicon-ok pull-right curr" style="margin-left:5px;"></span>
+					</div>
+				   <div type="button" class="btn choice btn-default">
+						  待审核 <span _value="0" class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+				   </div>
+				    <div type="button" class="btn choice btn-default">
+						  审核不通过<span _value="2" class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+				   </div>
+				</div>
+            </div>
+	  </div>
+		<table class="table table-bordered " id="list" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+			<thead >
+			<th class="js_number purchaseNo" data-field="purchaseNo">采购单号</th>
+			<th data-field="shopName">门店名称</th>
+			<th data-field="productName" class="productName" >采购商品</th>
+			<th data-field="quantity"> 采购合计数量</th>
+			<th data-field="username">采购员</th>
+			<th data-field="createTime">采购日期</th>
+			<th data-formatter="actionState" >采购状态</th>
+			<th data-field="expressNo">物流单号</th>
+			<th data-field="deliveryTime">发货日期</th>
+			<th class="js_review" data-formatter="actionExpressNo">审核</th>
+			<th class="delete" data-formatter="deleteExpressNo">删除</th>
+			</thead>
+		</table>
+    </div>
+  </div>

@@ -1,0 +1,135 @@
+﻿<%
+	if(_data){
+		_data=_data.length>0 ? JSON.parse(_data) : {};
+	}else{
+		_data={};
+	}
+%>
+
+<div class="createShopDetail">
+	<div class="top">
+		<span>配置门店信息（带</span>
+		<span class="must">*</span>
+		<span>为必填项）</span>
+	</div>
+
+	<div class="form-group form-group2 form-group-sm">
+		<label class="col-xs-2 control-label">
+			<span>选择专柜分类</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="btn-group shopType pull-left">
+			<div btntype="<%=_data.type%>" code="direct" class="addCode btn choice btn-default btn-dangerous " type="button" >
+				直营 <span class="default glyphicon glyphicon-ok pull-right <%= _data.type==0 ? 'curr':'cancel' %>" value="0" style="margin-left:5px;"></span>
+			</div>
+			<div  btntype="<%=_data.type%>" code="drp" class="addCode btn choice btn-default btn-dangerous " type="button" >
+				分销 <span class="glyphicon glyphicon-ok pull-right <%= _data.type==1 ? 'curr':'cancel' %>"  value="1" style="margin-left:5px;"></span>
+			</div>
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+	<div class="form-group form-group2 form-group-sm"  id="fxs" style="display: <%= _data.type==0 ? 'none':'block' %>">
+		<label class="col-xs-2 control-label" for="">
+			<span>选择所属分销商</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<select  <%= _data.type?"disabled=true":""%>  class="form-control pull-left"><option>请选择</option></select>
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+	<div class="form-group form-group-sm">
+		<label class="col-xs-2 control-label" for="formGroupInputSmall">
+			<span>输入专柜名</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<input  <%= _data.type?"disabled=true":""%> class="form-control" type="text" id="shopName" value="<%= _data.shopName %>" placeholder="">
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+	<div class="form-group form-group2 form-group-sm">
+		<label class="col-xs-2 control-label" for="formGroupInputSmall">
+			<span>输入专柜面积（m<sup>2</sup>)</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<input  <%= _data.type?"disabled=true":""%>  oninput="this.value=this.value.replace(/\D/g,'')"  class="form-control" type="text" id="areaSize" value="<%= _data.areaSize %>" placeholder="">
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+
+	<div class="form-group form-group2 form-group-sm">
+		<label class="col-xs-2 control-label" for="">
+			<span>选择区域</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left" id="citySelect">
+			<select  <%= _data.type?"disabled=true":""%> class="form-control pull-left"><option>请选择</option></select>
+			<select  <%= _data.type?"disabled=true":""%> class="form-control pull-left"><option>请选择</option></select>
+			<select  <%= _data.type?"disabled=true":""%>  class="form-control pull-left"><option>请选择</option></select>
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+
+	<div class="form-group form-group2 form-group-sm">
+		<label class="col-xs-2 control-label" for="">
+			<span>输入专柜详细地址</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<textarea  <%= _data.type?"disabled=true":""%> class="form-control col-xs-6 w400" type="text" id="address"  placeholder=""><%= _data.address %></textarea>
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+
+	<div class="top mt20">
+		<span>配置专柜负责人信息</span>
+		<span class="must">*</span>
+
+	</div>
+
+	<div class="form-group form-group-sm">
+		<label class="col-xs-2 control-label" for="">
+			<span>输入姓名</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<input class="form-control" type="text" id="shopMgrName" value="<%= _data.shopMgrName %>" placeholder="">
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+	<div class="form-group form-group2 form-group-sm">
+		<label class="col-xs-2 control-label" for="">
+			<span>输入手机号</span>
+			<span class="must">*</span>
+			<span>：</span>
+		</label>
+		<div class="pull-left">
+			<input class="form-control" type="text" id="shopMgrPhone" maxlength="11" value="<%= _data.shopMgrPhone %>" placeholder="">
+		</div>
+		<div class="pull-left error_tip">
+		</div>
+	</div>
+	<div class="form-group form-success form-group2 form-group-sm">
+		<div class="col-xs-10">
+			<button type="button" class="btn btn-width cancel btn-width-right btn-success">取消</button>
+			<button type="button" class="btn btn-width btn-width-left btn-success submit" tid="<%= _data.shopId %>">确定</button>
+		</div>
+	</div>
+
+</div>

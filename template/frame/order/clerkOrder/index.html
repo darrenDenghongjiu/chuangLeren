@@ -1,0 +1,388 @@
+<!--
+<div class="container">
+	<div class="clerkOrder table-responsive">
+	  	  <div class="top">
+			
+			<div class="stroename">
+				<span class="cstore">门店: 中山公园店</span>
+			</div>
+			<div class="col-xs-4 condition">
+                <div class="pull-left total"> 
+					<div class="pull-left l_h30 title">店员：</div>
+					<select name="type" class="form-control">
+						<option value="小王">小王</option>
+						<option value="小A">小A</option>
+						<option value="小B">小B</option>
+					</select>
+				</div>
+				<ul class="amount">
+					<li class="first">
+						今日成单：
+						<span>100</span>
+					</li>
+					<li class="money">
+						销量总计：
+						<span>2000</span>
+					</li>
+				</ul>
+            </div>
+			<div class="input-group">
+					<div class="pull-left-width">请先选择一个类别：</div>
+					<div class="category btn-group">
+						<div class="btn choice btn-default btn-dangerous" type="button">
+							  采购单号 <span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default">
+					   门店<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default">
+					   产品名称<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+					<div class="category-search">
+						<input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+						<span class="input-group-btn">
+							<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+						</span>
+					</div>
+					<div class="btn btn-default pull-right dropdown-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					高级搜索
+					</div>
+                </div>
+			<div class="advancesearch rows form-inline">
+				<div class="datetimepicker  first form-group">
+					<span>下单时间：</span>
+					<input class="form-control pull-left" id="datetimepicker" placeholder="开始时间" type="text">
+					<input class="form-control pull-left" id="datetimepicker1" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next  form-group">
+					<span>付款日期：</span>
+					<input class="form-control pull-left" id="datetimepicker2" placeholder="开始时间" type="text">
+					<input class="form-control pull-left" id="datetimepicker3" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next form-group">
+					<span>发货日期：</span>
+					<input class="form-control pull-left" id="datetimepicker4" placeholder="开始时间" type="text">
+					<input class="form-control pull-left" id="datetimepicker5" placeholder="结束时间" type="text">
+				</div>
+			<div class="orderoptions">
+				<div class="receipt">
+					<div class="pull-left-width">收货方式：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous" type="button">
+						快递   <span class="glyphicon glyphicon-ok pull-right" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default">
+					   自提<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					  
+					</div>
+				</div>
+				<div class="payoff">
+					<div class="pull-left-width">支付方式：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous" type="button">
+							  支付宝 <span class="glyphicon glyphicon-ok pull-right" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default">
+					   微信<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					  
+					</div>
+				</div>
+				
+				
+				
+				<div class="purchasestatus">
+					<div class="pull-left-width">采购单状态：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous" type="button">
+							  待支付 <span class="glyphicon glyphicon-ok pull-right" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default">
+					   待发货<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default">
+					   待收货<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default">
+					   完成<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div type="button" class="btn choice btn-default">
+					   取消<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+					<div class="btn btn-default dropdown-close pull-right dropdown-toggle" aria-expanded="true" isshow="yes">关闭</div>
+				</div>
+			</div>
+						
+			</div>
+			
+				
+			
+	  </div>
+    
+
+	   <div class="col-xs-6 isShow">
+                <div class="pull-left l_h30">是否显示详情：</div>
+                <div class="switchs">
+                    <div id="toggle-state-switch" class="switch">
+                        <div class="switch has-switch"  data-on-label="on" data-off-label="off" id="checkbox">
+						
+							<input type="checkbox" name="my-checkbox" class="checkbox" checked="" />
+						
+						</div>
+                    </div>
+                </div>
+       </div>
+	   
+
+	   
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>订单编号</th>
+           <th>订单商品</th>
+            <th>商品数量</th>
+            <th>成单店员</th>
+            <th>商品总额</th>
+			<th>订单总额</th>
+			<th>用户名</th>
+			<th>手机号</th>
+			<th>支付方式</th>
+			<th>订单状态</th>
+			<th>交易状态</th>
+			<th>收货方式</th>
+			<th>快递公司</th>
+			<th>快递单号</th>
+			<th>下单时间</th>
+			<th>付款时间</th>
+			<th>发货时间</th>
+			<th>备注</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="productName" >
+            <td class="js_number" rowspan="2">115</td>
+           <td>东方沐浴乳</td>
+            <td>5</td>
+            <td>小A</td>
+            <td>200</td>
+			<td>1000</td>
+			<td>小敏</td>
+            <td>18245623695</td>
+            <td>支付宝</td>
+			<td>已完成</td>
+            <td>已支付</td>
+            <td>自提</td>
+            <td>顺丰</td>
+            <td>521230025</td>
+			<td>2016-09-16</td>
+			<td>2016-09-16</td>
+            <td>2016-09-16</td>
+            <td>很满意</td>
+          </tr>
+
+		   <tr class="js_hide">
+				<td colspan="17" >东方沐浴乳</td>
+          </tr>
+
+		   <tr class="productName">
+            <td class="js_number" rowspan="2">114</td>
+
+            <td>5</td>
+            <td>小A</td>
+            <td>200</td>
+			<td>1000</td>
+			<td>小敏</td>
+            <td>18245623695</td>
+            <td>支付宝</td>
+			<td>已完成</td>
+            <td>已支付</td>
+            <td>自提</td>
+            <td>顺丰</td>
+            <td>521230025</td>
+			<td>2016-09-16</td>
+			<td>2016-09-16</td>
+            <td>2016-09-16</td>
+            <td>很满意</td>
+          </tr>
+		  <tr class="js_hide">
+           
+            <td colspan="17" >东方沐浴乳</td>
+          </tr>
+		   <tr class="productName">
+            <td class="js_number" rowspan="2" >113</td>
+
+            <td>5</td>
+            <td>小A</td>
+            <td>200</td>
+			<td>1000</td>
+			<td>小敏</td>
+            <td>18245623695</td>
+            <td>支付宝</td>
+			<td>已完成</td>
+            <td>已支付</td>
+            <td>自提</td>
+            <td>顺丰</td>
+            <td>521230025</td>
+			<td>2016-09-16</td>
+			<td>2016-09-16</td>
+            <td>2016-09-16</td>
+            <td>很满意</td>
+          </tr>
+		  <tr class="js_hide">
+            <td colspan="17" >东方沐浴乳</td>
+          </tr>
+		   
+        </tbody>
+      </table>
+    </div>
+  </div>
+-->
+
+<div class="container">
+	<div class="clerkOrder table-responsive">
+		<div class="top">
+
+			<div class="stroename">
+				<span class="cstore">门店: 中山公园店</span>
+			</div>
+			<div class="col-xs-4 condition">
+
+			</div>
+			<div class="input-group">
+				<div class="pull-left-width">请先选择一个类别：</div>
+				<div class="category btn-group">
+					<div class="btn choice btn-default btn-dangerous" type="button">
+						快递单号 <span class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					</div>
+					<div type="button" class="btn choice btn-default">
+						订单编号<span class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					</div>
+					<div type="button" class="btn choice btn-default">
+						快递公司名称<span class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					</div>
+				</div>
+				<div class="category-search">
+					<input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+						<span class="input-group-btn">
+							<button class="btn btn-default countData"  id="search_btn" type="button">搜索</button>
+						</span>
+				</div>
+				<div class="errorMsg">
+					<span></span>
+				</div>
+				<div class="btn btn-default pull-right dropdown-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					高级搜索
+				</div>
+			</div>
+			<div class="advancesearch rows form-inline">
+				<div class="datetimepicker  first form-group">
+					<span>下单时间：</span>
+					<input class="form-control pull-left" id="datetimepicker" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker1" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next  form-group">
+					<span>付款日期：</span>
+					<input class="form-control pull-left" id="datetimepicker2" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker3" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next form-group">
+					<span>发货日期：</span>
+					<input class="form-control pull-left" id="datetimepicker4" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker5" placeholder="结束时间" type="text">
+				</div>
+				<div class="orderoptions">
+					<div class="receipt">
+						<div class="pull-left-width">收货方式：</div>
+						<div class="purchasec btn-group">
+							<div type="button" class="btn choice btn-default first">
+								全部<span _value="" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+							</div>
+							<div class="btn choice btn-default btn-dangerous countData" type="button">
+								快递   <span _value="1"  class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								自提<span _value="2" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+
+						</div>
+					</div>
+
+
+
+					<div class="payoff">
+						<div class="pull-left-width">支付方式：</div>
+						<div class="purchasec btn-group">
+							<div type="button" class="btn choice btn-default first">
+								全部<span _value="all" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+							</div>
+							<div class="btn choice btn-default btn-dangerous countData" type="button">
+								支付宝 <span _value="zfb"  class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								微信<span _value="wx" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="purchasestatus">
+						<div class="pull-left-width">采购单状态：</div>
+						<div class="purchasec btn-group">
+							<div type="button" class="btn choice btn-default first">
+								全部<span _value="" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+							</div>
+							<div class="btn choice btn-default btn-dangerous countData" type="button">
+								待支付 <span _value="1" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								待发货<span _value="2" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								待收货<span _value="3" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								完成<span _value="4" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+							<div type="button" class="btn choice btn-default countData">
+								取消<span _value="5" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+							</div>
+						</div>
+						<div class="btn btn-default dropdown-close pull-right dropdown-toggle" aria-expanded="true" isshow="yes">关闭</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="col-xs-6 isShow">
+			<div class="pull-left l_h30">是否显示详情：</div>
+			<div class="switchs">
+				<div id="toggle-state-switch" class="switch">
+					<div class="switch has-switch"  data-on-label="on" data-off-label="off" id="checkbox">
+
+						<input type="checkbox" name="my-checkbox" class="checkbox" checked="" />
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<table class="table table-bordered">
+
+		</table>
+	</div>
+	<div class="pull-right pagination"></div>
+</div>

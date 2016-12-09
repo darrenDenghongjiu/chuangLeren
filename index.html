@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <title>分销系统后台首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui"/>
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+</head>
+<body class="main_body">
+    <div class="container-fluid" >
+    <!-- S 头部标题 -->
+    <header class="clr_header">
+        <h2>创乐人后台分销系统<span style="font-size:12px;">
+            （仅支持chrome、safari、各种浏览器的极速模式）</span>
+        </h2>
+        <div class="user_info">
+        	<span class="dropdown-toggle pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                用户名：<span id="userName"></span>
+                <span class="glyphicon glyphicon-triangle-bottom fs_12 mr20 ml10"></span>
+            </span>
+            <ul class="dropdown-menu">
+                <li><a href="javascript:;" id="change_passwod_node">修改密码</a></li>
+            </ul>
+            <a href="javascript:;" id="login_out">退出</a>
+        </div>
+    </header>
+    <!-- E 头部标题 -->
+
+
+    <nav class="navbar navbar-default main_nav">
+        <div class="container-fluid">
+            <!-- phone -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!-- web  -->
+            <div class="collapse navbar-collapse main_webnav" id="bs-example-navbar-collapse-1">
+
+            </div>
+        </div>
+    </nav>
+
+
+	<div class="row_wrapper">
+        <div class="row con_area">
+            <!-- S 左侧栏 -->
+            <div class="sidebar col-md-2"></div>
+            <!-- E 左侧栏 -->
+            <!-- S 右侧栏 -->
+            <div class="col-md-10 iframe_area">
+                <iframe src="" id="iframe_con" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" class="embed-responsive-item">
+
+				</iframe>
+            </div>
+            <!-- E 右侧栏 -->
+        </div>
+    </div>
+
+
+    <!-- 修改密码-->
+
+    <div class="popup  change_password hidden" >
+        <div class="popup_box">
+            <div class="text-center mt10 col-xs-12 "><strong class="fs_14 tname">修改密码</strong> <div class="close pull-right glyphicon glyphicon-remove changePasswords_close"></div></div>
+
+                <div class="col-xs-12 mt10 text-center l_h30"  >
+                    <div class="col-xs-12"><div class="pull-left word20">原始密码</div><div class="pull-left ml10"><input type="password" name="password1" maxlength="20"  class="form-control"></div></div>
+                    <div class="col-xs-12 mt10"><div class="pull-left word20">密 码</div><div class="pull-left ml10"><input type="password" name="password2" maxlength="20" class="form-control"></div></div>
+                    <div class="col-xs-12 mt10"><div class="pull-left">确认密码</div><div class="pull-left ml10"><input type="password" name="password3" maxlength="20"  class="form-control"></div></div>
+                </div>
+            <div class="col-xs-12 l_h30 tips"><div class="ml60 pl10 "></div></div>
+            <div class=" btn-block text-center btnGroup ">
+                <button type="button" class="btn btn-danger   changePasswords_close">取消</button>
+                <button type="button" class="btn btn-success  save_data ml10" >保存</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+    <script>
+		(function(win,doc){
+			var isDest = 0;
+			var type = "dev"; //dev pre online
+			var clientId = (type === "dev"?"40aee187-053d-448d-b975-035106ec1643":(type === "pre"?"40aee187-053d-448d-b975-035106ec1643":"3922eb23-3f48-4a5b-8767-df278b90b40e"));
+			var domain = (type === "dev"?"http://dev-passport.525happy.cn/":(type === "pre"?"http://pre-passport.525happy.cn/":"https://passport.biechipang.net/"));
+			var appConfig = {
+				domain:domain,
+				clientId:clientId,
+				platform:4,
+				interfaceVersion:'1.1.0',
+				version:isDest?"3B99A34E98C4DBHA":Date.now(),
+				dir:isDest?"dest":"src"
+			};
+			win.appConfig = appConfig;
+
+			function loadApp(){
+				var doc = document;
+				var head = doc.getElementsByTagName("head")[0];
+				var dir = appConfig.dir, version = appConfig.version;
+
+				var PubCSS = doc.createElement('link');
+				PubCSS.setAttribute("rel","stylesheet");
+				PubCSS.setAttribute("type","text/css");
+				PubCSS.setAttribute("href","./css/" + dir + "/" + "public.css?v=" + version);
+				head.appendChild(PubCSS);
+
+				var AMDScript = doc.createElement('script');
+				AMDScript.setAttribute("data-main","./js/" + dir + "/" + "main.js?v=" + version);
+				AMDScript.setAttribute("src","./js/" + dir + "/" + "require.js?v=" + version);
+				head.appendChild(AMDScript);
+			}
+
+			loadApp();
+		})(window,document);
+	</script>
+</body>
+</html>

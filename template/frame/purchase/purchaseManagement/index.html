@@ -1,0 +1,81 @@
+<% var rows = _data.rows; %>
+<div class="container">
+	<div class="purchaseManagement table-responsive">
+	  <div class="top">
+			<div class="input-group">
+					<div class="pull-left-width">请先选择一个类别：</div>
+					<div class="category btn-group">
+						<div value="purchaseNo" class="btn choice btn-default btn-dangerous" type="button">
+							  采购单号 <span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+						</div>
+						<div value = "shopName" type="button"  class="btn choice btn-default">
+					   门店<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					   <div value = "productName"  type="button"  class="btn choice btn-default">
+					   产品名称<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+					<div class="category-search">
+						<input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+						<span class="input-group-btn">
+							<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+						</span>
+					</div>
+					<div class="condition">
+						<div class="col-xs-4 orderBox">
+							<div class="pull-left orderStatus l_h30">采购单状态：</div>
+							<div class="pull-left"> <select name="type" class="form-control">
+								<option value="">全部</option>
+								<option value="0">待审核</option>
+								<option value="2">审核不通过</option>
+								<option value="1">待发货</option>
+								<option value="5">别吃胖已发货</option>
+								<option value="6">采购单完成</option>
+							</select>
+							</div>
+						</div>
+						<div class="datetimepicker">
+							<span>采购日期：</span>
+							<input id="datetimepicker"  class="form-control pull-left" placeholder="开始时间" type="text" >
+							<input id="datetimepicker1" class="form-control pull-left" placeholder="结束时间"  type="text" >
+						</div>
+					</div>
+					<!--
+					<div class="purchase">
+						<div class="pull-left-width">采购单状态：</div>
+						<div class="purchasec btn-group">
+							<div class="btn choice btn-default btn-dangerous" type="button">
+								  全部 <span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+							</div>
+							<div type="button"  class="btn choice btn-default">
+						   别吃胖已发货<span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+						   </div>
+						   <div type="button"  class="btn choice btn-default">
+						   采购单完成<span class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;"></span>
+						   </div>
+						</div>
+					</div>
+					-->
+                </div>
+	  </div>
+		<div class="errorMsg">
+			 <span></span>
+		</div>
+		<table class="table table-bordered " id="list" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+			<thead >
+			<th data-field="purchaseNo" class="js_number purchaseNo" >采购单号</th>
+			<th  data-field="shopName" >门店</th>
+			<th  data-field="productName" class="productName">采购商品</th>
+			<th  data-field="quantity">采购合计数量</th>
+			<th data-field="username">采购员</th>
+			<th data-field="createTime">采购时期</th>
+			<th data-formatter="statusEvents">采购单状态</th>
+			<th data-field="expressNo">物流单号</th>
+			<th data-field="deliveryTime">发货日期</th>
+			</thead>
+		</table>
+
+
+
+    </div>
+  </div>

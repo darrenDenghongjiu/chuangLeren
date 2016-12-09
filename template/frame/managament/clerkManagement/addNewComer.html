@@ -1,0 +1,102 @@
+﻿<% 
+	var temp_data=_data;
+%>
+<div class="container">
+	<div class="assistant">
+		<div class="top">
+			<span>添加店员（带</span>
+			<span class="must">*</span>
+			<span>为必填项）</span>
+		</div>
+		<div class="form-group form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+
+				<span>选择店铺</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="pull-left">
+				<select class="form-control" id="shopId">
+					<% if(temp_data.data.shopName){    %>
+					<option value="<%= temp_data.data.shopId %>"><%= temp_data.data.shopName %></option>
+					<%} else { %>
+							<option>请选择</option>
+							<% for(var i=0,o;o=temp_data.data[i];i++){ %>
+							<option value="<%= o.shopId %>"><%= o.shopName  %></option>
+							<% } %>
+					<% } %>
+				</select>
+			</div>
+			<div class="pull-left error_tip">
+			</div>
+		</div>
+		<div class="form-group form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+				<span>输入姓名</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="pull-left">
+			  <input class="form-control" type="text" id="name" value="<%= temp_data.data.realname %>" placeholder="">
+			</div>
+			<div class="pull-left error_tip">
+			</div>
+
+		</div>
+		<div class="form-group form-group2 form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+				<span>输入手机号</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="pull-left">
+			  <input class="form-control" oninput="this.value=this.value.replace(/\D/g,'')" type="text" id="phone" maxlength="11" value="<%= temp_data.data.phone %>" placeholder="">
+			</div>
+			<div class="pull-left error_tip">
+			</div>
+		</div>
+		<div class="form-group form-group2 form-group-sm">
+			<label class="col-xs-2 control-label" for="">
+				<span>登陆账号</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="pull-left">
+
+			  <input  maxlength="20"  <%= temp_data.data.username?"disabled=true":"" %> class="form-control" type="text" id="account" value="<%= temp_data.data.username %>" placeholder="">
+			</div>
+			<div class="pull-left error_tip">
+			</div>
+		</div>
+		<div class="form-group form-group2 form-group-sm">
+			<label class="col-xs-2 control-label">
+				<span>选择权限</span>
+				<span class="must"></span>
+				<span>：</span>
+			</label>
+			<!--
+			<div class="pull-left">
+				<span class="btn-width-s ">店长</span>
+				<span class="btn-width-s btn-width-left">店员</span>
+			</div>
+			-->
+			<div class="btn-group role pull-left">
+				<% for(var i=0,o;o=_data.role[i];i++) { %>
+					<div class="btn choice btn-default btn-dangerous <%= o.id==temp_data.data.roleids ? 'curr' : '' %>" type="button" tid="<%= o.id %>">
+						<%= o.name %> <span class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;display:<%= o.id==temp_data.data.roleids ? 'block' : 'none' %>"></span>
+					</div>
+				<% } %>
+
+			</div>
+			<div class="pull-left error_tip">
+			</div>
+		</div>
+		<div class="form-group form-success form-group2 form-group-sm">
+			<div class="col-xs-10">
+				<button type="button" class="btn btn-width cancel btn-width-right btn-success">取消</button>
+				<button type="button" class="btn btn-width btn-width-left btn-success submit" tid="<%= temp_data.data.id  %>">确定</button>
+			</div>
+		</div>
+
+	</div>
+  </div>

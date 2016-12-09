@@ -1,0 +1,64 @@
+﻿<div class="container">
+	<div class="assistant">
+		<div class="top">
+			<span>添加分销商店员（带</span>
+			<span class="must">*</span>
+			<span>为必填项）</span>
+		</div>
+		<div class="form-group form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+
+				<span>选择分销商</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="col-xs-10">
+				<select class="form-control" id="shopId">
+
+				</select>
+				<div class="check-text"  id="shopId-text"></div>
+			</div>
+		</div>
+		<div class="form-group form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+
+				<span>输入姓名</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="col-xs-10">
+			  <input class="form-control" type="text" id="name" value="" placeholder="" />
+			  <div class="check-text"  id="name-text"></div>
+			</div>
+		</div>
+		<div class="form-group form-group2 form-group-sm">
+			<label class="col-xs-2 control-label" for="formGroupInputSmall">
+				<span>输入手机号</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="col-xs-10">
+			  <input   max="111111111111" oninput="this.value=this.value.replace(/\D/g,'')" class="form-control" type="text" id="phone" maxlength="11" value="" placeholder="" />
+			  <div class="check-text"  id="phone-text"></div>
+			</div>
+		</div>
+		<div class="form-group form-group2 form-group-sm">
+			<label class="col-xs-2 control-label" for="">
+				<span>登陆账号</span>
+				<span class="must">*</span>
+				<span>：</span>
+			</label>
+			<div class="col-xs-10">
+			  <input class="form-control" type="text" id="account" value="" placeholder="" />
+			  <div class="check-text"  id="account-text"></div>
+			</div>
+		</div>
+		<div class="form-group form-success form-group2 form-group-sm">
+			<div class="col-xs-10">
+				<button type="button" class="btn btn-width cancel btn-width-right btn-success cancel">取消</button>
+				<button type="button" class="btn btn-width btn-width-left btn-success submit" tid="">确定</button>
+			</div>
+		</div>
+
+	</div>
+  </div>

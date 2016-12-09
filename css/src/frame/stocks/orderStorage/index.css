@@ -1,0 +1,60 @@
+ul li{list-style:none; }
+.orderStorage .edit { color:#5cb85c; }
+.orderStorage .table { text-align:center; margin-top:30px;  }
+.orderStorage .table th { text-align:center; }
+.orderStorage .top { margin-top:30px;  font-size:14px; font-weight:bold; overflow:hidden;
+ border-bottom:1px solid #e4e4e4; height:120px; padding-bottom:20px; }
+.orderStorage .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+.orderStorage .col-xs-3.search { width:100%; }
+.orderStorage .input-group { overflow:hidden; width:100%; }
+.orderStorage  .category-search { margin-left:20px; float:left; width:300px; }
+.orderStorage .pull-left-width { float:left;  line-height:34px; }
+.orderStorage .category {  float:left; overflow:hidden; margin-left:8px; }
+.orderStorage .category  span { display:none; }
+.orderStorage .category  span.curr { display:block; }
+.orderStorage .form-control-search { width:200px; }
+.orderStorage .btn-default:hover { background-color:#ffffff; }
+.orderStorage .purchase { float:left; margin-top:30px; }
+.orderStorage .purchasec  span { display:none; }
+.orderStorage .purchasec  span.curr{ display:block; }
+.orderStorage .productstatus { width:100%; float:left; }
+
+
+.ordernumber .col-xs-5 { width:50%; }
+.ordernumber .save_data,.ordernumber .cancel {  max-width:150px; min-width:130px;  min-height:40px; }
+.ordernumber .btnSave { float:left;  margin-top:50px;  margin-bottom:150px; width:100%; overflow:hidden; }
+.ordernumber .btnSave div.group { overflow:hidden; }
+.orderReview  .review { width:100%; overflow:hidden; float:left; margin-top:30px; }
+.orderReview  .review  span.title { float:left; line-height:34px; height:34px; }
+.orderReview  .review  .choice span { display:none; }
+.orderReview  .review  .choice.btn-dangerous span { display:block; }
+
+ul li { list-style:none; }
+.details .edit { color:#5cb85c; }
+.details .table { text-align:center; margin-top:30px;  }
+.details .table th { text-align:center; }
+.details .top { margin-top:30px;  font-size:16px; font-weight:bold; overflow:hidden; 
+ border-bottom:1px solid #e4e4e4; height:60px; padding-bottom:20px; }
+.details .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+.ordernumber { width:100%; margin-top:30px; }
+.ordernumber ul { width:100%; float:left;
+ padding-left:0px; overflow:hidden; border-bottom:1px solid #e4e4e4; padding-bottom:15px; }
+.ordernumber ul  li { float:left; margin-left:30px; height:34px; 
+font-size: 16px; font-weight: bold; line-height:34px;  }
+.ordernumber ul  li.first { margin-left:0px; }
+.ordernumber .txtarea textarea { width:50%; height:200px; resize:none; }
+.ordernumber .txtarea { margin-top:20px; float:left; width:100%; }
+.details .table.table-bordered { float:left; margin-top:15px; }
+.details  .confirm { margin-top:50px; margin-bottom:100px;  width:100%; background:-blue; height:50px; float:left;  overflow:hidden; }
+.details  .confirm div { width:84px; height:34px; padding:0 12px;
+border-radius:8px; text-align:center; line-height:34px; background:#5cb85c; color:#ffffff; margin:auto; }
+.details .enter {  width: 100px;  text-align: center;  margin: auto;  }
+.ordernumber .looking  {  width: 100%; overflow: hidden;  }
+.ordernumber .looking button { margin:auto;  display:block; float:inherit; }
+.productName { max-width:120px; }
+.purchaseNo  { max-width:120px; word-break: break-all; }
+.btn-success{ display:none; }
+.success-curr { display: inline-block; }
+.confirmReceipt.btn-success{ display: block; }
+.review.btn-success{ display: block; }
+.stroge.btn-success{ display: block; }

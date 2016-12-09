@@ -1,0 +1,32 @@
+<%  var flag=true;
+    if(location.host === "dev-adm.525happy.cn"){
+        flag=false;
+    }
+%>
+<nav class="left_menu">
+    <ul class="left_menu_ul">
+        <% for(var i=0,o;o=_data[i];i++) {%>
+        <li   class="left_menu_li" <%= "target="+o.express %>  <%= "tid="+o.id %>  <% if(_data[i].child){ %>  <%= "tid="+o.id %>  <%= "enabled="+flag ? o.enabled : '' %>"    <% } %>  >
+            <a  enabled="<%=flag ? o.enabled : '' %>"   class="nav_txt"  target="<%= o.url%>" <% if(_data[i].child){ %> <%= "tid="+o.id %> <% } %> >
+                <i class="l_icon glyphicon "></i>
+                <span><%= o.title %></span>
+                <i class="r_icon glyphicon   <%= _data[i].child ? 'glyphicon-menu-down':'glyphicon-link' %>"></i>
+            </a>
+            <% if(_data[i].child) {%>
+            <ul class="sec_ul">
+                <%for(var j=0,p;p=_data[i].child[j];j++) { %>
+                <li enabled="<%=flag ? p.enabled : '' %>"  target="<%= p.express%>"  tid="<%= p.id %>" >
+                    <a >
+                        <i class="icon_dot glyphicon glyphicon-chevron-right"></i>
+                        <span><%= p.title  %></span>
+                    </a>
+                </li>
+                <% } %>
+            </ul>
+            <% } %>
+
+
+        </li>
+        <% }%>
+    </ul>
+</nav>

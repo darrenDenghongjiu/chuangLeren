@@ -1,0 +1,27 @@
+.popup{position: fixed; left: 0; top: 0; background: rgba(225, 225, 225, 0.3); width: 100%; height: 100%;font-size: 12px;    z-index: 999;   font-size: 14px;  line-height: 30px;}
+.popup .popup_box{background: #fff; border: 1px solid #E6E6E6;    box-shadow: 0px 0px 2px 0px #ccc;width: 750px;  height: 260px;position: absolute; left: 0;right: 0;top:50%; margin:-130px auto}
+.mt10{margin-top: 10px}
+.mt20{margin-top: 20px}
+.word20{    letter-spacing: 12px;}
+.ml10{margin-left: 10px}
+table div{text-align: center}
+
+
+.node{width:80%;padding: 10px 0; height: auto;overflow:hidden;border: 1px solid #ccc; border-right:none; margin: auto;
+ -moz-user-select:none;/*火狐*/
+ -webkit-user-select:none;/*webkit浏览器*/
+ -ms-user-select:none;/*IE10*/
+ -khtml-user-select:none;/*早期浏览器*/
+ user-select:none;}
+.node li{width:100%; padding-left: 2%; line-height: 30px;border-bottom: 1px solid #ccc; border-right: 1px solid #ccc;text-align: center;cursor: pointer;    overflow: hidden; list-style: none}
+.node li a:active{background: #eee}
+.node li{font-size: 14px; text-align: left}
+.node li .add:before{  display: block; width: 20px;float: left; height: 20px;}
+.node li .none:before{  content: ''; display: block; width: 20px;float: left; height: 20px;}
+.node li a{width: 100%; position: relative}
+.node li a:hover{text-decoration:none}
+.node li:last-child{border-bottom: none}
+.node li *{border-right: none}
+.node li input{position: absolute; left: 200px;top:0px}
+.node li .none input{left: 180px;}
+.mt50{margin-top: 50px}

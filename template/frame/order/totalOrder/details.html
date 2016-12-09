@@ -1,0 +1,197 @@
+<% if(_data){ %>
+<% if(data.expressMsg){ %>
+  <%data.expressMsg = JSON.parse(data.expressMsg)%>
+<%}%>
+
+<div class="container">
+	<div class="details table-responsive">
+	
+	<div class="ordernumber">
+	
+	 <ul>
+		<li class="first">
+			订单编号： <span><%=data.orderNo%></span>
+		</li>
+		<li>
+			订单状态： <span>
+
+          <%=data.statusName%>
+        </span>
+		</li>
+	 </ul>
+	   
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>用户名</th>
+            <th>手机号</th>
+            <th>订单来源</th>
+            <th>支付方式</th>
+            <th>收货方式</th>
+			<th>商品总额</th>
+			<th>配送费用</th>
+			<th>折扣金额</th>
+			<th>订单总额</th>
+			<th>下单时间</th>
+			<th>付款时间</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><%=data.customerName%></td>
+            <td><%=data.customerTelephone%></td>
+            <td><%=data.orderSource%></td>
+            <td><%=(data.payTypeName==1)?'支付宝':((data.payTypeName==2)?'微信':'')%></td>
+            <td><%=data.shippingTypeName%></td>
+			<td><%=data.commodityPrice%></td>
+			<td><%=data.fee%></td>
+			<td><%=data.discountAmount%></td>
+            <td><%=data.orderPrice%></td>
+            <td><%=data.createTime%></td>
+			<td><%=data.payTime?data.payTime:'-'%></td>
+          </tr>   
+        </tbody>
+      </table>
+  </div>
+  <div class="ordernumber">
+	
+	 <ul>
+		<li class="first">
+			商品清单：
+		</li>
+	 </ul>
+	   
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th></th>
+            <th>商品名称</th>
+            <th>商品编号</th>
+            <th>商品属性</th>
+            <th>购买数量</th>
+			<th>商品单价</th>
+          </tr>
+        </thead>
+        <tbody>
+        <%for(var i=0,k;k=data.products[i];i++){%>
+          <tr>
+            <td><%=i+1%></td>
+            <td><%=k.name%></td>
+            <td><%=k.productId%></td>
+            <td><%=k.skuDesc%></td>
+            <td><%=k.quantity%></td>
+            <td><%=k.price%></td>
+          </tr>
+        <%}%>
+        </tbody>
+      </table>
+  </div>
+  
+  
+  
+    <div class="ordernumber">
+	
+	 <ul>
+		<li class="first">
+			配送信息：
+		</li>
+	 </ul>
+	   
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>收货人</th>
+            <th>收货人地区</th>
+            <th>收货人详细地址</th>
+            <th>收货人手机号码</th>
+            <th>收货人邮政编码</th>
+          </tr>
+        </thead>
+
+
+        <tbody>
+          <tr>
+            <td><%=data.shippingFullname%></td>
+            <td><%=data.shippingRegion%></td>
+            <td><%=data.address%></td>
+            <td><%=data.shippingTelephone%></td>
+            <td><%=data.shippingPostcode%></td>
+          </tr>
+        </tbody>
+      </table>
+  </div>
+     <%if(data.deliveryTime){%>
+      <div class="ordernumber">
+
+        <ul>
+          <li class="first">
+            物流信息：
+          </li>
+        </ul>
+
+        <table class="table table-bordered">
+          <thead>
+          <tr>
+            <th>快递公司</th>
+            <th>快递单号</th>
+            <th>发货时间</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><%=data.expressName%></td>
+            <td><%=data.expressNo%></td>
+            <td><%=data.deliveryTime%></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <%}%>
+      <% if(data.expressMsg){%>
+      <div class="ordernumber">
+        <span class="title">物流信息：</span>
+        <ul class="track-list">
+          <% if(data.expressMsg.expressMsg){%>
+          <% for(var i=0,o;o=data.expressMsg.expressMsg[i];i++){ %>
+          <% if(i==0){%>
+          <li class="curr">
+            <i class="node-icon"></i>
+            <span class="time"><%=o.time%></span>
+            <span class="txt"><%=o.context %> </span>
+          </li>
+          <% }else{ %>
+          <li>
+            <i class="node-icon"></i>
+            <span class="time"><%=o.time%></span>
+            <span class="txt"><%=o.context %> </span>
+          </li>
+          <% } %>
+          <% } %>
+          <% } %>
+        </ul>
+      </div>
+      <%}%>
+
+  <div class="ordernumber">
+    <!--
+	 <ul>
+		<li class="first">
+			备注：
+		</li>
+	 </ul>
+	 <div class="txtarea">
+		<textarea></textarea>
+	 </div>
+	 -->
+	 <div class="confirm">
+		<div>确定</div>
+	 </div>
+</div>
+
+</div>
+</div>
+<% } %>
+  
+  
+  
+  

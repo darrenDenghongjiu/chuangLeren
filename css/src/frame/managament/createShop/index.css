@@ -1,0 +1,46 @@
+
+.createShop .edit { color:#5cb85c; }
+.createShop .table { text-align:center; margin-top:30px;  }
+.createShop .table th { text-align:center; }
+.createShop .top { margin-top:30px;  font-size:14px; font-weight:bold; overflow:hidden;
+    border-bottom:1px solid #e4e4e4; height:auto; padding-bottom:20px;  }
+
+.createShop .productstatus { width:100%;}
+
+.productstatus .purchase{line-height: 30px}
+
+.createShop .cstore-top{padding-top: 20px; height: auto; overflow: hidden;line-height: 30px}
+.createShop .cstore-top .search{padding-left: 0}
+
+
+.createShopDetail .form-control{ width:200px; }
+
+.createShopDetail .col-xs-2 { width:150px;text-align: right;padding:0; }
+.createShopDetail { width:96%; margin:auto; margin-top:30px; font-weight:200; font-size:13px; }
+.createShopDetail .top { font-size:16px; font-weight:bold; overflow:hidden; border-bottom:1px solid #e4e4e4; height:40px; }
+.createShopDetail .top .must { color:red; line-height:34px; display:block; height:20px; float:left; margin-left:2px; }
+.createShopDetail .top span { float:left; }
+.createShopDetail .form-group { margin-top:20px;  overflow:hidden; }
+.createShopDetail .col-xs-2 { line-height:30px; }
+.createShopDetail .form-group .must { color:red; display:block; text-align:center;    display: inline-block;
+    width:10px; height:30px; line-height:36px; }
+.createShopDetail .form-group span { }
+.createShopDetail .form-group select{margin-right: 10px}
+.createShopDetail .btn-width-s { width:80px; height:22px;  color:#947B7B; border:1px solid #cccccc; border-radius:5px;
+    line-height:22px; text-align:center;  }
+
+
+.createShopDetail .btn-width-left { margin-left:39px; }
+.createShopDetail .btn-width-right { margin-left:19px; }
+.createShopDetail .form-success { margin-top:30px; }
+.createShopDetail .form-success .cancel{ background:#c9302c; border:1px solid #c9302c; }
+.createShopDetail .btn-width { width:100px; height:40px; line-height:20px; }
+.createShopDetail .btn-default:hover { background-color:#ffffff; }
+.createShopDetail .btn-group { margin-left:15px; }
+.createShopDetail .cancel { display:none; }
+.btn-success.cancel { display:inline; }
+.mt20{margin-top: 20px}
+.createShopDetail  .w400{width:400px; resize: none; }
+.createShopDetail .error_tip{padding-left:10px; line-height: 30px; font-weight: bold; color:red;}
+.addCode{ display:none; }
+.success-curr{ display:block; }

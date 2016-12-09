@@ -1,0 +1,71 @@
+ul li { list-style:none; }
+.clerkOrder .edit { color:#5cb85c; }
+.clerkOrder .table { text-align:center; margin-top:30px;  }
+.clerkOrder .table th { text-align:center; }
+.clerkOrder .top { margin-top:30px;  font-size:14px; font-weight:bold; overflow:hidden;
+ border-bottom:1px solid #e4e4e4; height:auto; padding-bottom:20px; }
+.clerkOrder .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+
+
+.clerkOrder .stroename { float:left; height:34px; line-height:34px; }
+.clerkOrder .condition { overflow:hidden; width:50%; }
+.clerkOrder .condition .total { overflow:hidden; width:200px; }
+.clerkOrder .condition .total .title { float:left; height:34px; line-height:34px; }
+.clerkOrder .condition .total .form-control { float:left; width:150px; }
+.clerkOrder .amount { float:left; overflow:hidden; height:34px; line-height:34px; }
+.clerkOrder .amount li { float:left; margin-left:20px; }
+.clerkOrder .amount li.first{  margin-left:0px; }
+.clerkOrder .amount li span { font-size:20px; color:#55a840; }
+
+
+.clerkOrder .input-group { overflow:hidden; width:100%; margin-top:30px; float:left; }
+.clerkOrder  .category-search { margin-left:20px; float:left; width:260px; }
+.clerkOrder .pull-left-width { float:left;  line-height:34px; }
+.clerkOrder .category {  float:left; overflow:hidden; margin-left:8px; }
+.clerkOrder .category  span { display:none; }
+.clerkOrder .category .btn-dangerous span { display:block; }
+.clerkOrder .form-control-search { width:200px; }
+.clerkOrder .btn-default:hover { background-color:#ffffff; }
+.clerkOrder .top .dropdown-toggle {background: #5cb85c; color: #ffffff; }
+.clerkOrder .advancesearch { overflow:hidden; display:none; float:left; width:100%; height:0px; }
+.clerkOrder .advancesearch  input {  width:37%; text-align:center; }
+.clerkOrder .advancesearch .datetimepicker { float:left; margin-top:30px; }
+.clerkOrder .advancesearch .datetimepicker.next { margin-left:0px; padding:0px; }
+.clerkOrder .orderoptions { float:left; margin-top:30px; width:100%; }
+.clerkOrder .datetimepicker span{ float:left; height:34px; line-height:34px;  }
+.clerkOrder .datetimepicker.col-xs-3 { width:33.2%; }
+.clerkOrder .col-xs-3.first { padding-left:0; }
+.datetimepicker .form-control { padding:6px 3px; }
+.clerkOrder .payoff { margin-top:30px; }
+.clerkOrder .purchasestatus { margin-top:30px; width:100%; }
+.orderoptions .choice .cancel {  display: none; }
+.clerkOrder .dropdown-close { float:right; }
+.clerkOrder .isShow {  overflow: hidden;  margin-top: 30px;  margin-bottom: 30px;  }
+ul li { list-style:none; }
+.details .edit { color:#5cb85c; }
+.details .table { text-align:center; margin-top:30px;  }
+.details .table th { text-align:center; }
+.details .top { margin-top:30px;  font-size:16px; font-weight:bold; overflow:hidden; 
+ border-bottom:1px solid #e4e4e4; height:60px; padding-bottom:20px; }
+.details .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+.ordernumber { width:100%; background:-blue; margin-top:30px; }
+.ordernumber ul { width:100%; float:left;
+ padding-left:0px; overflow:hidden; border-bottom:1px solid #e4e4e4; padding-bottom:15px; }
+.ordernumber ul  li { float:left; margin-left:30px; height:34px; 
+font-size: 16px; font-weight: bold; line-height:34px;  }
+.ordernumber ul  li.first { margin-left:0px; }
+.ordernumber .txtarea textarea { width:50%; height:200px; resize:none; }
+.ordernumber .txtarea { margin-top:15px; float:left; width:100%; }
+.details .table.table-bordered { float:left; margin-top:15px; }
+.details  .confirm { margin-top:50px; margin-bottom:100px;  width:100%; background:-blue; height:50px; float:left;  overflow:hidden; }
+.details  .confirm div { width:84px; height:34px; padding:0 12px; border-radius:8px; text-align:center; line-height:34px; background:#5cb85c; color:#ffffff; margin:auto; }
+tbody tr.js_hide { display:none; }
+.countData .curr
+.clerkOrder .isShow { overflow:hidden; margin-top:30px; margin-bottom:30px; }
+.clerkOrder .isShow .pull-left { height:34px; line-height:34px; }
+.clerkOrder .isShow .switch-left {  }
+tbody .js_hide td{ text-align:left; }
+
+
+
+

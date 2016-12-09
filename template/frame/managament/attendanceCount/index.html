@@ -1,0 +1,52 @@
+﻿ <div class="container">
+	<div class="clerkManager table-responsive">
+	  <div class="top">
+			<div class="cstore-top">
+				<span class="cstore">门店：</span>
+				<div class="pull-left">
+					<select name="type" class="form-control change store">
+				</select>
+				</div>
+				
+				<div class="btn btn-default pull-right dropdown-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+					高级搜索
+				</div>
+				 <div class="col-xs-3 search">
+					<div class="input-group">
+						<input type="text" class="form-control" id="keywords" placeholder="关键词">
+								  <span class="input-group-btn">
+									<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+								  </span>
+					</div>
+				</div>
+			</div>
+			<div class="datetimepicker">
+				<span>请选择时间：</span>
+				<input class="form-control" id="datetimepicker" placeholder="开始时间" type="text" >
+				<input class="form-control" id="datetimepicker1" placeholder="结束时间" type="text" >
+				<div class="btn btn-default dropdown-close pull-right dropdown-toggle" aria-expanded="true" isshow="yes">关闭</div>
+			</div>
+	  </div>
+
+        <div class="  list_table">
+            <div class="table-responsive">
+                <table class="table table-bordered " id="table" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+                    <thead >
+                    <th data-field="id"  class="hidden">ID</th>
+                    <th   data-field="shopName" >门店</th>
+                    <th  data-field="employeeNo" >工号</th>
+                    <th  data-field="userName" >账号</th>
+					<th  data-field="realName" >真实姓名</th>
+                    <th  data-field="recordTime"  data-formatter="actionFormatter_date">日期</th>
+                    <th  data-field="recordWeek" >星期</th>
+                    <th data-field="action" data-formatter="actionFormatter_btn" data-events="actionEvents"></th>
+                    </thead>
+                </table>
+            </div>
+        </div>
+
+    </div>
+  </div>
+  
+<!--
+  <a href="javascript:;" class="js_detail" data-id="3">打开详细页</a>-->

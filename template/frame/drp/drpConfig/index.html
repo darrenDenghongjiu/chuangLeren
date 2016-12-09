@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="drpConfig table-responsive">
+        <div class="top">
+
+            <div class="col-xs-3 search">
+                <div class="input-group">
+                    <div class="pull-left pull-left-width l_h30">输入分销商名称：</div>
+                    <input type="text" class="form-control form-control-search" id="keywords" placeholder="关键词">
+                    <span class="input-group-btn">
+                          <button class="btn btn-default" id="search_btn" type="button">搜索</button>
+                    </span>
+                    <div class="chec-text"></div>
+                </div>
+            </div>
+
+            <div class="col-xs-4 condition">
+                <div class="pull-left l_h30">配置启始等级：</div>
+                <div class="pull-left">
+                    <select name="type" class="form-control change level">
+                        <option value="">请选择</option>
+                        <option value="1">一级</option>
+                        <option value="2">二级</option>
+                        <option value="3">三级</option>
+                        <option value="4">四级</option>
+                        <option value="5">五级</option>
+                        <option value="6">六级</option>
+                        <option value="7">七级</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-xs-4 condition">
+                <div class="pull-left l_h30">选择所属区域：</div>
+                <div class="pull-left">
+                <select name="type" class="form-control city province">
+                </select>
+                <select name="type" class="form-control city urban">
+                    <option value="">请选择城市</option>
+                </select>
+                <select name="type" class="form-control city area">
+                    <option value="">请选择地区</option>
+                </select>
+                </div>
+            </div>
+
+        </div>
+
+        <table class="table table-bordered " id="list" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+            <thead >
+            <th data-field="distributorId">分销商编码</th>
+            <th data-field="distributorName">分销商名称</th>
+            <th data-field="level">等级</th>
+            <th data-formatter="discountEvent" data-field="discount">折扣</th>
+            <th data-formatter="setArea">所属区域</th>
+            <th data-field="distributorMgrName">专柜负责人</th>
+            <th data-field="account">登陆账号</th>
+            <th data-field="distributorMgrPhone">联系方式</th>
+            <th class="addedit"  data-formatter="editDistributor">编辑</th>
+            </thead>
+        </table>
+        <div class="pagination-detail btn-group edit_ico">
+            <button code="add" class="addCode btn btn-default edit_add" type="button">
+                <span class="glyphicon glyphicon-plus-sign blue" aria-hidden="true"></span>
+            </button>
+            <button class="btn btn-default edit_refresh" type="button">
+                <span class="glyphicon glyphicon-refresh green" aria-hidden="true"></span>
+            </button>
+        </div>
+    </div>
+</div>

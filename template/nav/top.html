@@ -1,0 +1,18 @@
+<ul class="nav navbar-nav">
+    <%
+    var flag=true;
+        if(location.host === "dev-adm.525happy.cn"){
+             flag=false;
+        }
+    %>
+    <% for(var i=0,o; o= _data[i];i++){
+        if(o.name=='index') break;
+    %>
+    <li enabled="<%= flag ? o.enabled : '' %>"
+        target="<%= o.express %>">
+        <a href="javascript:;"><%= o.title %></a>
+    </li>
+    <%  }%>
+</ul>
+
+

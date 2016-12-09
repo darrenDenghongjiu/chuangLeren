@@ -1,0 +1,75 @@
+﻿<div class="container">
+	<div class="createShop table-responsive">
+
+        <div class="top">
+
+            <div class="productstatus">
+                <div class="purchase">
+                    <div class="pull-left">选择门店类型：</div>
+                    <div class="purchasec btn-group" id="shopType">
+                        <div  class="btn choice btn-default btn-dangerous" type="button">
+                            全部 <span value="" class="glyphicon glyphicon-ok pull-right curr" style="margin-left:5px;"></span>
+                        </div>
+                        <div type="button" class="btn choice btn-default">
+                            直营<span  value="0"  class="glyphicon glyphicon-ok pull-right" style="margin-left:5px; display: none"></span>
+                        </div>
+                        <div  type="button" class="btn choice btn-default">
+                            分销<span value="1" class="glyphicon  glyphicon-ok pull-right" style="margin-left:5px;display: none"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cstore-top">
+                <div class="cstore pull-left">输入门店名称：</div>
+
+                <div class="col-xs-3 search" >
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="keywords" placeholder="关键词">
+								  <span class="input-group-btn">
+									<button class="btn btn-default" id="search_btn" type="button">搜索</button>
+								  </span>
+                    </div>
+                </div>
+            </div>
+
+	  </div>
+
+        <div class="  list_table">
+            <div class="table-responsive">
+                <table class="table table-bordered " id="table" data-toggle="table" data-pagination="true"   data-show-export="true"  data-url="">
+                    <thead >
+                    <th   data-field="shopNo" >专柜编码</th>
+                    <th   data-field="type"  data-formatter="actionFormatter_typeName" >专柜分类</th>
+                    <th  data-field="distributorName" >所属分销商</th>
+                    <th  data-field="level"  >分销商等级</th>
+                    <th data-formatter="discountEvnet" data-field="discount" >分销商折扣</th>
+                    <th  data-field="shopName" >专柜名</th>
+                    <th  data-field="address" >专柜详细地址</th>
+                    <th  data-field="areaSize" >专柜面积（m<sup>2</sup>)</th>
+                    <th  data-field="shopMgrName" >专柜负责人</th>
+                    <th  data-field="shopMgrPhone" >联系方式</th>
+                    <th  data-formatter="actionFormatter_edit" data-events="actionEvents"></th>
+                    </thead>
+                </table>
+                <div class="pagination-detail btn-group edit_ico" >
+                    <button code="add" class="btn addCode btn-default edit_add" type="button" ><span class="glyphicon glyphicon-plus-sign blue" aria-hidden="true"></span></button>
+                    <!--<button class="btn btn-default" type="button" id="delete_list">
+                             <span class="glyphicon glyphicon-trash gray" aria-hidden="true"></span>
+                        </button>
+                    -->
+                    <button class="btn btn-default edit_refresh" type="button" ><span class="glyphicon glyphicon-refresh green" aria-hidden="true"></span></button>
+                </div>
+            </div>
+            </div>
+        </div>
+  </div>
+ <!--<div style="margin-bottom:20px;">
+	<a class="js_detail" data-id="3" href="javascript:;">我就是要去详细页(child页面)</a>
+</div>
+<div>
+	<a class="js_list" data-id="3" href="javascript:;">去list页面（同级页面）</a>
+</div>
+-->
+
+

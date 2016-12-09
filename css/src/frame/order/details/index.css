@@ -1,0 +1,20 @@
+ul li { list-style:none; }
+.details .edit { color:#5cb85c; }
+.details .table { text-align:center; margin-top:30px;  }
+.details .table th { text-align:center; }
+.details .top { margin-top:30px;  font-size:16px; font-weight:bold; overflow:hidden; 
+ border-bottom:1px solid #e4e4e4; height:60px; padding-bottom:20px; }
+.details .table>tbody>tr>td, .table>tbody>tr>th { vertical-align:middle; }
+.ordernumber { width:100%; background:-blue; margin-top:30px; }
+.ordernumber ul { width:100%; float:left;
+ padding-left:0px; overflow:hidden; border-bottom:1px solid #e4e4e4; padding-bottom:15px; }
+.ordernumber ul  li { float:left; margin-left:30px; height:34px; 
+font-size: 16px; font-weight: bold; line-height:34px;  }
+.ordernumber ul  li.first { margin-left:0px; }
+.ordernumber .txtarea textarea { width:50%; height:200px; resize:none; }
+.ordernumber .txtarea { margin-top:15px; float:left; width:100%; }
+.details .table.table-bordered { float:left; margin-top:15px; }
+.details  .confirm { margin-top:50px; margin-bottom:100px;  width:100%; background:-blue; height:50px; float:left;  overflow:hidden; }
+.details  .confirm div { width:84px; height:34px; padding:0 12px;
+
+border-radius:8px; text-align:center; line-height:34px; background:#5cb85c; color:#ffffff; margin:auto; }

@@ -1,0 +1,158 @@
+<div class="container">
+	<div class="totalOrder table-responsive">
+	  <div class="top">
+			<div class="top-box">
+				<div class="stroename">
+					<div class="pull-left-width">门店：</div>
+				</div>
+				<div class="col-xs-4 condition">
+
+				</div>
+				<div class="condition1">
+					<ul class="amount">
+						<li class="first">
+							今日成单：
+							<span></span>
+						</li>
+						<li class="money">
+							销量总计：
+							<span></span>
+						</li>
+					</ul>
+				</div>
+			<div class="input-group">
+					<div class="pull-left-width">请输入关键字：</div>
+					<!--<div class="category btn-group">
+						<div class="btn choice btn-default btn-dangerous" type="button">
+							快递单号 <span class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default">
+							订单编号<span class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default">
+					         快递公司名称<span class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+					-->
+					<div class="category-search">
+						<input type="text"  class="form-control form-control-search" id="keywords" placeholder="快递单号,订单编号,快递公司名称">
+						<span class="input-group-btn">
+							<button class="btn btn-default countData"  id="search_btn" type="button">搜索</button>
+						</span>
+						<div class="errorMsg">
+							<span></span>
+						</div>
+						<div class="btn btn-default pull-right dropdown-search dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+							高级搜索
+						</div>
+					</div>
+                </div>
+
+
+			<div class="advancesearch rows form-inline">
+				<div class="datetimepicker  first form-group">
+					<span>下单时间：</span>
+					<input class="form-control pull-left datetime" id="datetimepicker" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker1" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next  form-group">
+					<span>付款日期：</span>
+					<input class="form-control pull-left datetime" id="datetimepicker2" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker3" placeholder="结束时间" type="text">
+				</div>
+				<div class="datetimepicker next form-group">
+					<span>发货日期：</span>
+					<input class="form-control pull-left datetime" id="datetimepicker4" placeholder="开始时间" type="text">
+					<input class="form-control pull-left datetime" id="datetimepicker5" placeholder="结束时间" type="text">
+				</div>
+
+
+
+
+			<div class="orderoptions">
+				<div class="receipt">
+					<div class="pull-left-width">收货方式：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span _value="" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous countData" type="button">
+						快递   <span _value="1"  class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default countData">
+					   自提<span _value="2" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+
+					</div>
+				</div>
+				<div class="payoff">
+					<div class="pull-left-width">支付方式：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span _value="" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous countData" type="button">
+							  支付宝 <span _value="1"  class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default countData">
+					   微信<span _value="2" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+				</div>
+
+				<div class="purchasestatus">
+					<div class="pull-left-width">订单状态：</div>
+					<div class="purchasec btn-group">
+						<div type="button" class="btn choice btn-default first">
+					   全部<span _value="" class="glyphicon glyphicon-ok pull-right" style="margin-left:5px;"></span>
+					   </div>
+						<div class="btn choice btn-default btn-dangerous countData" type="button">
+							  待支付 <span _value="1" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left: 5px;"></span>
+						</div>
+						<div type="button" class="btn choice btn-default countData">
+					   待发货<span _value="3" class="glyphicon glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default countData">
+					   待收货<span _value="4" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					   <div type="button" class="btn choice btn-default countData">
+					   完成<span _value="5" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+						<div type="button" class="btn choice btn-default countData">
+					   取消<span _value="2" class="glyphicon  glyphicon-ok pull-right cancel" style="margin-left:5px;"></span>
+					   </div>
+					</div>
+					<div class="btn btn-default dropdown-close pull-right dropdown-toggle" aria-expanded="true" isshow="yes">关闭</div>
+				</div>
+			</div>
+
+			</div>
+			</div>
+	  </div>
+
+
+
+
+
+
+	   <div class="col-xs-6 isShow">
+                <div class="pull-left l_h30">是否显示详情：</div>
+                <div class="switchs">
+                    <div id="toggle-state-switch" class="switch">
+                        <div class="switch has-switch"  data-on-label="on" data-off-label="off" id="checkbox">
+
+							<input type="checkbox" name="my-checkbox" class="checkbox" checked="" />
+
+						</div>
+                    </div>
+                </div>
+       </div>
+
+
+
+      <table class="table table-bordered">
+
+      </table>
+    </div>
+	<div class="pull-right pagination"></div>
+  </div>

@@ -1,0 +1,17 @@
+<% if(_data){ %>
+    <% if(data[0]){ %>
+    <div class="pull-left total">
+        <div class="pull-left l_h30 title">店员：</div>
+        <%if(data.length<=1){%>
+          <div value="<%=data[0].id%>" class="sellIdName"><%=data[0].realname%></div>
+        <% }else{ %>
+            <select name="type" class="form-control">
+                <option value="0">全部</option>
+                <%for(var i=0,o;o=data[i];i++){%>
+                <option value="<%=o.id%>"><%=o.realname%></option>
+                <% } %>
+            </select>
+        <% } %>
+    </div>
+<% } %>
+<% } %>
